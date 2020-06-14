@@ -63,8 +63,8 @@ func DeletePerson(w http.ResponseWriter, r *http.Request) {
 // função principal para executar a api
 func main() {
     router := mux.NewRouter()
-    people = append(people, Person{ID: "1", Firstname: "John", Lastname: "Doe", Address: &Address{City: "City X", State: "State X"}})
-    people = append(people, Person{ID: "2", Firstname: "Koko", Lastname: "Doe", Address: &Address{City: "City Z", State: "State Y"}})
+    people = append(people, Person{ID: "1", Firstname: "Bruno", Lastname: "Neves", Address: &Address{City: "Sao Paulo", State: "SP"}})
+    people = append(people, Person{ID: "2", Firstname: "Gustavo", Lastname: "Neves", Address: &Address{City: "Guarulhos", State: "SP"}})
     router.HandleFunc("/contato", GetPeople).Methods("GET")
     router.HandleFunc("/contato/{id}", GetPerson).Methods("GET")
     router.HandleFunc("/contato/{id}", CreatePerson).Methods("POST")
